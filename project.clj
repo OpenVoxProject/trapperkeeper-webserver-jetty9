@@ -49,7 +49,7 @@
   :java-source-paths  ["java"]
 
   :plugins [[lein-parent "0.3.7"]
-            [org.openvoxproject/i18n "0.8.0"]]
+            [org.openvoxproject/i18n "0.9.3-SNAPSHOT"]]
 
   :deploy-repositories [["clojars" {:url "https://clojars.org/repo"
                                      :username :env/CLOJARS_USERNAME
