@@ -1,15 +1,16 @@
-[![Build Status](https://travis-ci.org/puppetlabs/trapperkeeper-webserver-jetty9.png?branch=master)](https://travis-ci.org/puppetlabs/trapperkeeper-webserver-jetty9)
+## Trapperkeeper Webserver Service - Jetty 9
 
-## Trapperkeeper Webserver Service
+NOTE: This project is replaced by trapperkeeper-webserver-jetty10. However, project still declare
+this version for testing so until we move everything over, this remains.
 
 This project provides a webserver service for use with the
-[trapperkeeper service framework](https://github.com/puppetlabs/trapperkeeper)
+[trapperkeeper service framework](https://github.com/openvoxproject/trapperkeeper)
 To use this service in your trapperkeeper application, simply add this
 project as a dependency in your leiningen project file:
 
-[![Clojars Project](http://clojars.org/puppetlabs/trapperkeeper-webserver-jetty9/latest-version.svg)](http://clojars.org/puppetlabs/trapperkeeper-webserver-jetty9)
+[![Clojars Project](http://clojars.org/org.openvoxproject/trapperkeeper-webserver-jetty9/latest-version.svg)](http://clojars.org/org.openvoxproject/trapperkeeper-webserver-jetty9)
 
-Then add the webserver service to your [`bootstrap.cfg`](https://github.com/puppetlabs/trapperkeeper#bootstrapping)
+Then add the webserver service to your [`bootstrap.cfg`](https://github.com/openvoxproject/trapperkeeper#bootstrapping)
 file, via:
 
     puppetlabs.trapperkeeper.services.webserver.jetty9-service/jetty9-service
@@ -19,14 +20,10 @@ Note that this implementation of the
 improvements over previous versions of Jetty that may be significant depending on
 your application.  This service requires JRE 1.7 or greater;
 however, the interface is intended to be agnostic to the underlying web server
-implementation.  We also provide a
-[Jetty 7 version of the service](https://github.com/puppetlabs/trapperkeeper-webserver-jetty7),
-which can be used interchangeably with this one and will support older JDKs.
-You should only need to change your lein dependencies and your `bootstrap.cfg`
-file--no code changes.
+implementation.
 
 The web server is configured via the
-[trapperkeeper configuration service](https://github.com/puppetlabs/trapperkeeper#configuration-service);
+[trapperkeeper configuration service](https://github.com/openvoxproject/trapperkeeper#configuration-service);
 so, you can control various properties of the server (ports, SSL, etc.) by adding a `webserver`
 section to one of your Trapperkeeper configuration files, and setting various properties
 therein.  For more info, see [Configuring the Webserver](doc/jetty-config.md). It is possible to configure
@@ -823,6 +820,4 @@ is available [here](doc/test-utils.md).
 
 ## Support
 
-We use the [Trapperkeeper project on JIRA](https://tickets.puppetlabs.com/browse/TK)
-for tickets on the Trapperkeeper Webserver Service, although Github issues are
-welcome too.
+GitHub issues and PRs are welcome! Additionally, drop us a line in [the Vox Pupuli Slack](https://voxpupuli.slack.com).
